@@ -14,5 +14,6 @@ class Player extends Model
         'phone',
         'avatar',
         'name',
+        'url',
     ];
 }
