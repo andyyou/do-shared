@@ -28,6 +28,11 @@ class SharedServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__.'/../../database/migrations' => database_path('migrations'),
             ], 'migrations');
+            
+            // 註冊共用套件指令
+            $this->commands([
+                \App\Console\Commands\SharedPackCommand::class,
+            ]);
         }
 
         $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
