@@ -1,0 +1,26 @@
+{
+    "name": "andyyou/do-shared",
+    "description": "共用程式碼",
+    "type": "library",
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^12",
+        "illuminate/database": "^12",
+        "illuminate/queue": "^12"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "App\\Providers\\SharedServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable"
+}
